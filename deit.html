@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pill Reminder App</title>
+    <script defer src="deit.js"></script>
+    <link rel="stylesheet" href="deit.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Pill Reminder</h1>
+        <form id="pill-form">
+            <input type="text" id="pill-name" placeholder="Pill Name" required>
+            <input type="time" id="pill-time" required>
+            <input type="text" id="pill-frequency" placeholder="Frequency (e.g., Daily)" required>
+            <input type="file" id="pill-image" accept="image/*" required>
+            <label>
+                <input type="checkbox" id="pill-alarm">
+                Enable Alarm
+            </label>
+            <button type="submit">Add Pill</button>
+        </form>
+        <ul id="pill-list"></ul>
+    </div>
+</body>
+</html>
