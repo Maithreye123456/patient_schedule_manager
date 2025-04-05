@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Dashboard</title>
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">Details</div>
+        <div class="profile-summary">
+            <img id="sidebar-profile-pic" src="https://via.placeholder.com/100" alt="Profile Picture">
+            <p id="sidebar-patient-name">👤 Patient Name</p>
+            <p id="sidebar-phone">📞 Phone</p>
+            <p id="sidebar-email">✉️ Email</p>
+            <p id="sidebar-blood-group">🩸 Blood Group</p>
+        </div>
+    </div>
+    
+    <div class="main-content">
+        <h2>Patient Profile</h2>
+        <form id="patient-form" enctype="multipart/form-data">
+            <div class="card">
+                <input type="file" id="profile-pic" name="profile_pic" accept="image/*" onchange="updateProfilePic(event)">
+                <img id="display-profile-pic" src="https://via.placeholder.com/100" alt="Profile Picture">
+                
+                <h3><input type="text" id="patient-name" name="name" placeholder="Enter Name" required oninput="updateSidebar()" pattern="[A-Za-z\s]+" title="Only alphabets allowed"></h3>
+                
+                <p>📞 
+                    <input 
+                        type="tel" 
+                        id="phone" 
+                        name="phone" 
+                        placeholder="Enter 10-digit Phone" 
+                        required 
+                        maxlength="10" 
+                        pattern="\d{10}" 
+                        title="Please enter a 10-digit phone number" 
+                        oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                    >
+                </p>
+                
+                <p>✉️ 
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        placeholder="Enter Email" 
+                        required 
+                        oninput="updateSidebar()"
+                    >
+                </p>
+                
+                <p>🩸 
+                    <select id="blood-group" name="blood_group" onchange="updateSidebar()" required>
+                        <option value="" disabled selected>Select Blood Group</option>
+                        <option value="A+">A+ (A Positive)</option>
+                        <option value="A-">A- (A Negative)</option>
+                        <option value="B+">B+ (B Positive)</option>
+                        <option value="B-">B- (B Negative)</option>
+                        <option value="AB+">AB+ (AB Positive)</option>
+                        <option value="AB-">AB- (AB Negative)</option>
+                        <option value="O+">O+ (O Positive)</option>
+                        <option value="O-">O- (O Negative)</option>
+                    </select>
+                </p>
+            </div>
+
+            <div class="card overview">
+               
+                <ul>
+                    <li>Gender: 
+                        <select id="gender" name="gender" required>
+                            <option value="" disabled selected>Select Gender</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </li>
+                    <li>Date of Birth: <input type="date" id="dob" name="dob"></li>
+                    <li>Next of Kin: <input type="text" id="next-of-kin" name="next_of_kin" placeholder="Enter Next of Kin" pattern="[A-Za-z\s]+" title="Only alphabets allowed"></li>
+                    <li>Previous Visit: <input type="date" id="prev-visit" name="prev_visit"></li>
+                    <li>Next Visit: <input type="date" id="next-visit" name="next_visit"></li>
+                    <li>Allergies: <input type="text" id="allergies" name="allergies" placeholder="Enter Allergies" pattern="[A-Za-z,\s]+" title="Enter a list of allergies separated by commas"></li>
+                </ul>
+                <button type="button" onclick="saveInfo()">Save Information</button>
+                <button type="button" onclick="deleteProfile()">Delete Profile</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="profile.js"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meal Planner</title>
+    <link rel="stylesheet" href="alarm.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Meal Planner</h2>
+        <div class="meal-option">
+            <img src="breakfast.jpg" class="meal-image" alt="Breakfast">
+            <input type="text" id="breakfastInput" placeholder="Enter Breakfast">
+            <button onclick="selectMeal('Breakfast', 'breakfastInput')">Select</button>
+        </div>
+        <div class="meal-option">
+            <img src="lunch.jpg" class="meal-image" alt="Lunch">
+            <input type="text" id="lunchInput" placeholder="Enter Lunch">
+            <button onclick="selectMeal('Lunch', 'lunchInput')">Select</button>
+        </div>
+        <div class="meal-option">
+            <img src="snacks.jpg" class="meal-image" alt="Snacks">
+            <input type="text" id="snackInput" placeholder="Enter Snacks">
+            <button onclick="selectMeal('Snacks', 'snackInput')">Select</button>
+        </div>
+        <div class="meal-option">
+            <img src="dinner.jpg" class="meal-image" alt="Dinner">
+            <input type="text" id="dinnerInput" placeholder="Enter Dinner">
+            <button onclick="selectMeal('Dinner', 'dinnerInput')">Select</button>
+        </div>
+        
+        <div class="selected-meals">
+            <h3>Selected Meals</h3>
+            <div class="meal-columns">
+                <div>
+                    <h4>Morning</h4>
+                    <ul id="morningList"></ul>
+                </div><br>
+                <div>
+                    <h4>Afternoon</h4>
+                    <ul id="afternoonList"></ul>
+                </div><br>
+                <div>
+                    <h4>Snacks</h4>
+                    <ul id="snackList"></ul>
+                </div>
+                <br>
+                <div>
+                    <h4>Evening</h4>
+                    <ul id="eveningList"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="alarm.js"></script>
+</body>
+</html>

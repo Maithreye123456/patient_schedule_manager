@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doctor Profile Management</title>
+  <link rel="stylesheet" href="doctor.css">
+</head>
+<body>
+  <div class="main-content">
+    <div class="container">
+      <h2>Enter Doctor Details</h2>
+      <form id="doctorForm" enctype="multipart/form-data">
+        <input type="hidden" id="doctorId" name="id">
+        
+        <label>Name:</label>
+        <input type="text" id="doctorName" name="doctorName" required><br>
+    
+        <label>Specialization:</label>
+        <input type="text" id="specialization" name="specialization" required><br>
+    
+        <label>Experience (Years):</label>
+        <input type="number" id="experience" name="experience" required><br>
+    
+        <label>Doctor Number:</label>
+        <input type="text" id="doctorNumber" name="doctorNumber" required><br>
+    
+        <label>Email:</label>
+        <input type="email" id="email" name="email" required><br>
+    
+        <label>Duty Time:</label>
+        <input type="text" id="dutyTime" name="dutyTime"><br>
+    
+        <label>Profile Picture:</label>
+        <input type="file" id="profilePic" name="profilePic"><br><br>
+    
+        <button type="submit" id="submitBtn">Add Doctor</button>
+    </form>
+    
+  </div >
+    
+
+    <!-- Doctor (or Patient) Profiles Section -->
+    <div class="doctor-list" id="doctorList">
+      <h2>Doctor Profiles</h2>
+    </div>
+  </div>
+
+  <script src="doctor.js"></script>
+</body>
+</html>

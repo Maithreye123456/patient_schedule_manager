@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Patient Routine Management</title>
+    <link rel="stylesheet" href="homepage.css">
+</head>
+<body>
+    <!-- Sidebar Section -->
+    <aside>
+        <div class="sidebar">
+            <div class="logo">Patient Details</div>
+            <div class="profile-summary">
+                <img id="sidebar-profile-pic" src="https://via.placeholder.com/100" alt="Profile Picture">
+                <ul>
+                    <li id="sidebar-patient-name">👤 Patient Name</li>
+                    <li id="sidebar-phone">📞 Phone</li>
+                    <li id="sidebar-email">✉️ Email</li>
+                    <li id="sidebar-blood-group">🩸 Blood Group</li>
+                </ul>
+                </div>
+                <ul>
+                    <li><a href="doctor.html">👤 Doctor</a></li>
+                    
+                    <li><a href="labbill.html">💳 Bill</a></li>
+                    
+                    <li><a href="logout.php">🚪 Logout</a></li>
+                </ul>
+            
+        </div>
+    </aside>
+
+    <!-- Main Content Section -->
+    <main class="main-content">
+        <header class="algos">
+            <nav>
+                <ul class="navbar">
+                    <a href="homepage.html">Home</a>
+                    <a href="doctor.html">Doctor</a>
+                    <a href="deit.html">Diet</a>
+                    <a href="timetabl.html">TimeTable</a>
+                    <a href="reports.html">Reports</a>
+                   
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Dashboard Cards Section -->
+        <section class="container">
+            <div class="dashboard">
+
+                <!-- Patient Profile Card -->
+                <div class="card profile-card">
+                    <h2><a href="profile.html">👤 PATIENT PROFILE</a></h2>
+                    <ul>
+                        <li><strong>Name:</strong> <span id="dashboard-name">John Doe</span></li>
+                        <li><strong>Blood Group:</strong> <span id="dashboard-blood-group">O+</span></li>
+                    </ul>
+                </div>
+
+                <!-- Hospital Details Card -->
+                <div class="card hospital-card">
+                    <h2><a href="hospital-details.html">🏥 HOSPITAL</a></h2>
+                    <ul>
+                        <li><strong>1:</strong> Max Hospital</li>
+                        <li><strong>2:</strong> Nanjappa Hospital</li>
+                        <li><strong>3:</strong> Kidwai Hospital</li>
+                    </ul>
+                </div>
+
+                <!-- Consulted Doctor Card -->
+                <div class="card doctor-card">
+                    <h2><a href="doctor.html">👨‍⚕️ CONSULTED DOCTOR</a></h2>
+                    <ul>
+                        <li><strong>Doctor:</strong> Dr. Smith</li>
+                        <li><strong>Specialization:</strong> Cardiologist</li>
+                        <li><strong>Appointment:</strong> 10:00 AM</li>
+                    </ul>
+                </div>
+
+                <!-- Time Table Card -->
+                <div class="card timetable-card">
+                    <h2><a href="timetabl.html">⏰ TIME TABLE</a></h2>
+                    <ul>
+                        <li><strong>10:00 PM:</strong> Appointment</li>
+                        <li><strong>6:00 PM:</strong> Check-up</li>
+                        <li><strong>8:00 PM:</strong> Operation</li>
+                    </ul>
+                </div>
+
+                <!-- Diet Plan Card -->
+                <div class="card diet-card">
+                    <h2><a href="alarm.html">🍎 DIET PLAN</a></h2>
+                    <ul>
+                        <li><strong>Breakfast:</strong> Oatmeal and Fruits</li>
+                        <li><strong>Lunch:</strong> Grilled Chicken Salad</li>
+                        <li><strong>Dinner:</strong> Steamed Vegetables and Fish</li>
+                    </ul>
+                </div>
+
+                <!-- Alarm Reminder Card -->
+                <div class="card alarm-card">
+                    <h2><a href="deit.html">⏰PILL ALARM</a></h2>
+                    <ul>
+                        
+                        <li><strong>10:00 AM:</strong> Azithromycin</li>
+                        <li><strong>2:00 PM:</strong> Parazex Suspension</li>
+                        <li><strong>8:00 PM:</strong> Acetaminophen</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- JavaScript to Fetch Data -->
+    <script src="homepage.js"></script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    background-image:url("itern img.web");
+    background-size:cover;
+
+
+    animation: fadeIn 1s ease-in;
+}
+
+/* Main Container */
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    animation: slideUp 0.8s ease-out;
+}
+
+/* Upload Section */
+.upload-section {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="file"] {
+    display: block;
+    margin: 10px auto;
+}
+
+button {
+    background: #0072ff;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+}
+
+button:hover {
+    background: #005bbf;
+    transform: scale(1.05);
+}
+
+/* Report List */
+.report-list {
+    text-align: left;
+}
+
+.report-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.report-card {
+    background: white;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeSlide 0.6s ease-in forwards;
+}
+
+/* Report Thumbnail */
+.report-card img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.report-card a {
+    text-decoration: none;
+    color: #0072ff;
+    font-weight: bold;
+}
+
+.report-card button {
+    background: red;
+    color: white;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeSlide {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}

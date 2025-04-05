@@ -1,0 +1,46 @@
+<!-- timetable.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Schedule Management</title>
+    <link rel="stylesheet" href="timetabl.css">
+    <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.css' rel='stylesheet' />
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.js'></script>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h3>Patient Schedule</h3>
+            <button onclick="openForm()">Add Event</button>
+            <div id="eventList"></div>
+        </div>
+        <div class="main-calendar">
+            <div id="calendar"></div>
+        </div>
+    </div>
+
+    <div class="form-container" id="scheduleForm">
+        <h3>Add Patient Schedule</h3>
+        <label for="patientName">Patient Name:</label>
+        <input type="text" id="patientName" placeholder="Enter name">
+        
+        <label for="eventDate">Date & Time:</label>
+        <input type="datetime-local" id="eventDate">
+        
+        <label for="eventType">Event Type:</label>
+        <select id="eventType">
+            <option value="Appointment">Appointment</option>
+            <option value="Checkup">Checkup</option>
+            <option value="Operation">Operation</option>
+            <option value="Medication">Medication</option>
+        </select>
+        
+        <button onclick="saveSchedule()">Save</button>
+        <button onclick="closeForm()">Cancel</button>
+    </div>
+
+    <script src="timetabl.js"></script>
+</body>
+</html>
